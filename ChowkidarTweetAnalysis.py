@@ -21,12 +21,6 @@ apiSecret = 'Replace with your Secret'
 accessToken = 'Replace with your access token'
 accessTokenSecret = 'Replace with your Secret'
 
-apiKey = 'JWgKfdS1A5P9oHKlab5tqItlP'
-apiSecret = 'ucC9Nh4pMDUAACt77bW8pUF11OexcoOvQpSUdroPmo7KoXxCgh'
-accessToken = '940940585434677253-xfvgSfbFGhSEBx94F8zJs7pbMd3VLBW'
-accessTokenSecret = 'RcFS69zjoDMs5N2b7LG3fdHBuSfibVQSvuPaVAg2396t5'
-
-
 # Authorise Tweepy to use your keys
 
 auth = tweepy.OAuthHandler(apiKey, apiSecret)
