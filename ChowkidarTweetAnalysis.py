@@ -46,40 +46,19 @@ for page in range(1,52):
 
 # ### Collect their last 20 tweets
 
-# In[ ]:
-
-
-
-
-
-# In[11]:
 
 
 tweets = []
-for steps in range(0,1000,100):
-    for user in chowkidars[steps:steps+100]:
+for user in chowkidars:
         try:
             tweets+= [t.text for t in  api.user_timeline(user.id)]
         except:
             pass
-for user in chowkidars[1000:len(chowkidars)]:
-        try:
-            tweets+= [t.text for t in  api.user_timeline(user.id)]
-        except:
-            pass
-
-
-# In[46]:
 
 
 total_chowkidars = len(chowkidars)
 total_tweets = len(tweets)
 
-
-# In[80]:
-
-
-import pandas as pd
 df = pd.DataFrame(tweets, columns=['text'])
 nehruvianQuery = 'Nehru|Rajiv|Jwahar[lal]| Jawahr[lal]|Indira|Jawahar[lal]|Bofors|Bofars|जवाहरलाल|नेहरु|राजीव|इन्दिरा|इन्दीरा'
 nehruvianTweets = df['text'].str.contains(nehruvianQuery,case=False, regex=True).value_counts()
